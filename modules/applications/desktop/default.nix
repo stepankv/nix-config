@@ -4,6 +4,7 @@
   imports = [
     ./alacritty.nix
     ./brave.nix
+    ./hiddify.nix
     ./obsidian.nix
     ./telegram.nix
   ];
