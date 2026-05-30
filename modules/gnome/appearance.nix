@@ -80,6 +80,7 @@
         enabled-extensions = [
           "rounded-window-corners@fxgn"
           "dash-to-dock@micxgx.gmail.com"
+          "appindicatorsupport@rgcjonas.gmail.com"
         ];
       };
 

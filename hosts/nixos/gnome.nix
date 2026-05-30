@@ -32,6 +32,7 @@
     yaru-theme # Gnome theme
     gnomeExtensions.rounded-window-corners-reborn
     gnomeExtensions.dash-to-dock
+    gnomeExtensions.appindicator
     gnomeExtensions.xremap
   ];
 }
