@@ -10,6 +10,7 @@
     builtins.elem (lib.getName pkg) [
       "nvidia-x11"
       "nvidia-settings"
+      "nvidia-kernel-modules"
     ];
 
   services.xserver.videoDrivers = [ "nvidia" ];
@@ -23,7 +24,7 @@
       package = config.boot.kernelPackages.nvidiaPackages.stable;
       modesetting.enable = true;
       powerManagement.enable = true;
-      open = false;
+      open = true;
       nvidiaSettings = true;
     };
   };

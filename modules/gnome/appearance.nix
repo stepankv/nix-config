@@ -93,6 +93,7 @@
         show-trash = true;
         show-mounts-network = true;
         hot-keys = false;
+        # ignored from gnome 50. related issue: https://github.com/micheleg/dash-to-dock/issues/2582
         disable-overview-on-startup = true;
         extend-height = false;
         intellihide = false; # otherwise, dock would hide only when window overlap
@@ -129,5 +130,6 @@
 
     gtk3.extraConfig.gtk-application-prefer-dark-theme = 1;
     gtk4.extraConfig.gtk-application-prefer-dark-theme = 1;
+    gtk4.theme = null;
   };
 }
