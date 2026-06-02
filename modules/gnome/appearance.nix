@@ -98,13 +98,6 @@
         extend-height = false;
         intellihide = false; # otherwise, dock would hide only when window overlap
       };
-
-      # Desktop icons
-      "org/gnome/shell/extensions/ding" = {
-        icon-size = "tiny";
-        show-home = false;
-        start-corner = "top-right";
-      };
     };
   };
 
