@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
   # Start rootless docker to run the docker daemon as a non-root user
