@@ -46,6 +46,8 @@
           pkg:
           builtins.elem (nixpkgs-unstable.lib.getName pkg) [
             "obsidian"
+            "steam"
+            "steam-unwrapped"
           ];
       };
 

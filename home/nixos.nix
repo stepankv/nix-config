@@ -1,8 +1,12 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
   imports = [
     ./common.nix
+  ];
+
+  home.packages = with pkgs.unstable; [
+    steam
   ];
 
   programs.zsh.shellAliases = {
