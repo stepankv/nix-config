@@ -78,6 +78,7 @@
             builtins.elem (nixpkgs-unstable.lib.getName pkg) [
               "kotlin-lsp"
               "obsidian"
+              "intellij-idea"
             ];
         };
       };
