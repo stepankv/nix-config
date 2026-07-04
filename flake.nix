@@ -45,6 +45,7 @@
         config.allowUnfreePredicate =
           pkg:
           builtins.elem (nixpkgs-unstable.lib.getName pkg) [
+            "idea"
             "obsidian"
           ];
       };

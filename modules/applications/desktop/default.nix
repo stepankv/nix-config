@@ -5,6 +5,7 @@
     ./alacritty.nix
     ./brave.nix
     ./hiddify.nix
+    ./jetbrains.nix
     ./obsidian.nix
     ./telegram.nix
   ];
