@@ -15,7 +15,10 @@
     networkmanager.enable = true;
   };
 
+  hardware.enableRedistributableFirmware = true;
+
   time.timeZone = "Europe/Moscow";
+
   i18n = {
     defaultLocale = "C.UTF-8";
     extraLocaleSettings = {
