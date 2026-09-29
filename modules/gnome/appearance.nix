@@ -22,7 +22,7 @@
       };
 
       "org/gnome/desktop/background" = {
-        picture-uri-dark = "${./wallpaper.jxl}";
+        picture-uri-dark = "${../../assets/wallpaper.jxl}";
       };
 
       # Mouse acceleration
