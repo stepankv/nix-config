@@ -28,6 +28,11 @@
 
   security.rtkit.enable = true;
 
+  security.pki.certificateFiles = [
+    ../../assets/certs/russian_trusted_root_ca_pem.crt
+    ../../assets/certs/russian_trusted_sub_ca_pem.crt
+  ];
+
   services.pulseaudio.enable = false;
 
   services.pipewire = {
