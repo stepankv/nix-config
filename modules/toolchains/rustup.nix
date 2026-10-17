@@ -1,16 +1,15 @@
 { pkgs, lib, ... }:
 
+let
+  rust-unstable = pkgs.unstable.rustup;
+in
 {
-  home.packages = with pkgs.unstable; [
-    rustup
-  ];
+  home.packages = [ rust-unstable ];
 
   home.activation = {
     setupRustup = lib.hm.dag.entryAfter [ "writeBoundary" ] ''
-      # Avoid implicit updates to make activation
-      # run "${pkgs.rustup}/bin/rustup" install stable --no-update --no-self-update
-      run "${pkgs.rustup}/bin/rustup" install stable --no-self-update
-      run "${pkgs.rustup}/bin/rustup" default stable
+      run "${rust-unstable}/bin/rustup" install stable --no-self-update
+      run "${rust-unstable}/bin/rustup" default stable
     '';
   };
 
