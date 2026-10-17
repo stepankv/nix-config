@@ -40,17 +40,15 @@
       # User-facing applications (shell tools & desktop apps)
       # use the unstable channel to get the latest versions
       # without waiting for the next NixOS release cycle.
-      pkgs-unstable = import nixpkgs-unstable {
-        system = "x86_64-linux";
-        config.allowUnfreePredicate =
-          pkg:
-          builtins.elem (nixpkgs-unstable.lib.getName pkg) [
-            "obsidian"
-          ];
-      };
-
       unstable-overlay = final: prev: {
-        unstable = pkgs-unstable;
+        unstable = import nixpkgs-unstable {
+          system = final.stdenv.hostPlatform.system;
+          config.allowUnfreePredicate =
+            pkg:
+            builtins.elem (nixpkgs-unstable.lib.getName pkg) [
+              "obsidian"
+            ];
+        };
       };
 
       station = {
@@ -60,6 +58,7 @@
     in
     {
       formatter.x86_64-linux = nixpkgs-stable.legacyPackages.x86_64-linux.nixfmt-tree;
+      formatter.aarch64-darwin = nixpkgs-stable.legacyPackages.aarch64-darwin.nixfmt-tree;
 
       nixosConfigurations = {
         "homestation@nixos" = nixpkgs-stable.lib.nixosSystem {
@@ -80,6 +79,17 @@
               };
             }
           ];
+        };
+      };
+
+      homeConfigurations = {
+        "homestation@macos" = home-manager.lib.homeManagerConfiguration {
+          pkgs = import nixpkgs-stable {
+            system = "aarch64-darwin";
+            overlays = [ unstable-overlay ];
+          };
+          modules = [ ./home/macos.nix ];
+          extraSpecialArgs = { inherit dotfiles dotfiles-nvim station; };
         };
       };
     };
