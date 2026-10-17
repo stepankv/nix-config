@@ -53,17 +53,6 @@
         unstable = pkgs-unstable;
       };
 
-      ubuntu-packages = import nixpkgs-stable {
-        system = "x86_64-linux";
-        config.nvidia.acceptLicense = true;
-        config.allowUnfreePredicate =
-          pkg:
-          builtins.elem (nixpkgs-unstable.lib.getName pkg) [
-            "nvidia-x11"
-          ];
-        overlays = [ unstable-overlay ];
-      };
-
       station = {
         username = "stepan";
         hostname = "kfcnix-734";
@@ -91,14 +80,6 @@
               };
             }
           ];
-        };
-      };
-
-      homeConfigurations = {
-        "homestation@ubuntu" = home-manager.lib.homeManagerConfiguration {
-          pkgs = ubuntu-packages;
-          modules = [ ./home/ubuntu.nix ];
-          extraSpecialArgs = { inherit dotfiles dotfiles-nvim station; };
         };
       };
     };
