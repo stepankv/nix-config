@@ -1,4 +1,4 @@
-{ station, ... }:
+{ station, pkgs, ... }:
 
 {
   imports = [
@@ -19,4 +19,7 @@
 
   xdg.enable = true;
   programs.home-manager.enable = true;
+  home.packages = with pkgs.unstable; [
+    xclip # used by Nvim to share OS and Nvim buffers (run `:h clipboard` for details)
+  ];
 }

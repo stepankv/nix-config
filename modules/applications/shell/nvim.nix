@@ -4,7 +4,6 @@
   home.packages = with pkgs.unstable; [
     neovim
 
-    xclip # used by Nvim to share OS and Nvim buffers (run `:h clipboard` for details)
     libxml2 # XML formatter
     shellcheck # Shell linter. Used by bash-language-server.
     shfmt # Shell formatter
