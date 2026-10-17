@@ -24,6 +24,7 @@
     cloc # print project file summary
     lazydocker # docker tui
     just # command runner
+    gh
   ];
 
   programs.zsh.shellAliases = {
