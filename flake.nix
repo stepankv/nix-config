@@ -70,6 +70,8 @@
       };
     in
     {
+      formatter.x86_64-linux = nixpkgs-stable.legacyPackages.x86_64-linux.nixfmt-tree;
+
       nixosConfigurations = {
         "homestation@nixos" = nixpkgs-stable.lib.nixosSystem {
           specialArgs = {
