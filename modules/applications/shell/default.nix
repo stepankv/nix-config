@@ -2,6 +2,7 @@
 
 {
   imports = [
+    ./ai.nix
     ./fzf.nix # fuzzy search
     ./git.nix
     ./lazygit.nix # git tui
