@@ -56,6 +56,8 @@
   environment.systemPackages = with pkgs; [
     vim
     git
+    curl
+    file
   ];
 
   # Perform garbage collection
