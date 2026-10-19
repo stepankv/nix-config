@@ -3,7 +3,7 @@
   home.packages = with pkgs.unstable; [
     fzf
     fd # better file
-    ripgrep # bette grep
+    ripgrep # better grep
     bat # better cat (for file preview)
   ];
 
