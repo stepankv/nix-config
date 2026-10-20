@@ -7,7 +7,7 @@
     gh
   ];
 
-  xdg.configFile."git".source = "${dotfiles}/git";
+  xdg.configFile."git/config".source = "${dotfiles}/git/config";
   xdg.configFile."lazygit".source = "${dotfiles}/lazygit";
 
   programs.zsh = {
