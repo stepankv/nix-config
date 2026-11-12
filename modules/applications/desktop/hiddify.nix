@@ -3,16 +3,19 @@
 let
   hiddify = pkgs.appimageTools.wrapType2 {
     pname = "hiddify";
-    version = "4.1.1";
+    version = "5.5.5";
     src = pkgs.fetchurl {
-      url = "https://github.com/hiddify/hiddify-app/releases/download/v4.1.1/Hiddify-Linux-x64-AppImage.AppImage";
-      sha256 = "sha256-6yu2wIlxuY4tCgH8W2R+KboXsWYRScyfl+2g53v1vcM=";
+      url = "https://github.com/hiddify/hiddify-app/releases/download/v5.5.5/Hiddify-Linux-x64-AppImage.AppImage";
+      sha256 = "sha256-0cpIwiqtOMs6UyT8uq2f3aV9dHedBnHffxTJnIXW0EE=";
     };
     extraPkgs =
       pkgs: with pkgs; [
         libepoxy
         zstd
       ];
+  };
+  hiddifyContents = pkgs.appimageTools.extract {
+    inherit (hiddify) pname version src;
   };
 in
 {
@@ -21,7 +24,7 @@ in
   xdg.desktopEntries.hiddify = {
     name = "Hiddify";
     exec = "${hiddify}/bin/hiddify";
-    icon = "network-vpn";
+    icon = "${hiddifyContents}/hiddify.png";
     terminal = false;
     categories = [ "Network" ];
     settings = {
