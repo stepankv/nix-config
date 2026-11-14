@@ -135,6 +135,27 @@
         "type": "github"
       }
     },
+    "kotlin-lsp": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs-unstable"
+        ],
+        "systems": "systems"
+      },
+      "locked": {
+        "lastModified": 1794578160,
+        "narHash": "sha256-U84SaEEYWLqv6cAKRBi7WlcKnyCBfoSo+jNkRLArKYA=",
+        "owner": "loss-and-quick",
+        "repo": "kotlin-lsp.nix",
+        "rev": "86217bb73d4f345a54cc489c833183f4c77ed30e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "loss-and-quick",
+        "repo": "kotlin-lsp.nix",
+        "type": "github"
+      }
+    },
     "nix-darwin": {
       "inputs": {
         "nixpkgs": [
@@ -228,11 +249,27 @@
         "home-manager": "home-manager",
         "homebrew-cask": "homebrew-cask",
         "homebrew-core": "homebrew-core",
+        "kotlin-lsp": "kotlin-lsp",
         "nix-darwin": "nix-darwin",
         "nix-homebrew": "nix-homebrew",
         "nixpkgs-stable": "nixpkgs-stable",
         "nixpkgs-unstable": "nixpkgs-unstable",
         "xremap-flake": "xremap-flake"
+      }
+    },
+    "systems": {
+      "locked": {
+        "lastModified": 1791244623,
+        "narHash": "sha256-uuanbkFk8a313Zfrxdcz8Us/yQtaxNnKJtX8v0ZPpd8=",
+        "owner": "nix-systems",
+        "repo": "default",
+        "rev": "d36eeed142f88b5a636f2e3856a53c61654cf29b",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-systems",
+        "repo": "default",
+        "type": "github"
       }
     },
     "xremap": {

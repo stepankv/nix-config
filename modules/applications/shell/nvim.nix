@@ -15,6 +15,7 @@
     taplo # Toml language formatter
 
     # Language Servers
+    kotlin-lsp
     lua-language-server
     bash-language-server
     buf
