@@ -5,6 +5,11 @@
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    kotlin-lsp = {
+      url = "github:loss-and-quick/kotlin-lsp.nix";
+      inputs.nixpkgs.follows = "nixpkgs-unstable";
+    };
+
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs-stable";
@@ -49,6 +54,7 @@
     {
       nixpkgs-stable,
       nixpkgs-unstable,
+      kotlin-lsp,
       xremap-flake,
       home-manager,
       nix-darwin,
@@ -66,9 +72,11 @@
       unstable-overlay = final: prev: {
         unstable = import nixpkgs-unstable {
           system = final.stdenv.hostPlatform.system;
+          overlays = [ kotlin-lsp.overlays.default ];
           config.allowUnfreePredicate =
             pkg:
             builtins.elem (nixpkgs-unstable.lib.getName pkg) [
+              "kotlin-lsp"
               "obsidian"
             ];
         };
