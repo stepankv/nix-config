@@ -10,6 +10,6 @@
 
   home.packages = with pkgs.unstable; [
     deluge
-    vlc
+    mpv
   ];
 }
