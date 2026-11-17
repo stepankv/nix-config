@@ -92,7 +92,7 @@
             station = homestation;
           };
           modules = [
-            ./hosts/nixos
+            ./hosts/homestation
             xremap-flake.nixosModules.default
             home-manager.nixosModules.home-manager
             { nixpkgs.overlays = [ unstable-overlay ]; }
@@ -100,7 +100,7 @@
               home-manager = {
                 useGlobalPkgs = true;
                 useUserPackages = true;
-                users.${homestation.username} = import ./home/nixos.nix;
+                users.${homestation.username} = import ./home/homestation.nix;
                 extraSpecialArgs = {
                   inherit dotfiles dotfiles-nvim;
                   station = homestation;

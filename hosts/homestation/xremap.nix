@@ -7,6 +7,6 @@
     userName = station.username;
     withGnome = true;
     extraArgs = [ "--watch=device" ];
-    yamlConfig = builtins.readFile ./xremap.yml;
+    yamlConfig = builtins.readFile ../../assets/xremap.yml;
   };
 }
