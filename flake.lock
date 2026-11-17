@@ -35,11 +35,11 @@
     "dotfiles": {
       "flake": false,
       "locked": {
-        "lastModified": 1794508793,
-        "narHash": "sha256-wgDmHZj511H0wskWSCnuHkNM4iKrcCdo0Y5UCsewOwg=",
+        "lastModified": 1794936463,
+        "narHash": "sha256-/TXFboJ+SEf378ylQUhFpL4353jmtercLXHbQNFCcHY=",
         "owner": "stepankv",
         "repo": "dotfiles",
-        "rev": "e0178fb4022d42d8200ad68395fdda0921fe9876",
+        "rev": "5431969e890b85d4201d622cb61e7df2998fff78",
         "type": "github"
       },
       "original": {
@@ -51,11 +51,11 @@
     "dotfiles-nvim": {
       "flake": false,
       "locked": {
-        "lastModified": 1792834643,
-        "narHash": "sha256-CrkXUtb0H8j5Vu8O6nYleLRy9Q7aztGabzUK4mSmaZk=",
+        "lastModified": 1794937399,
+        "narHash": "sha256-aZ/NZ7KIompw9dy1jwjfC0v0ndrW9GOxT+rmc9nezSc=",
         "owner": "stepankv",
         "repo": "dotfiles.nvim",
-        "rev": "a8379574a0c5d07b62191250a61413b1c5cb62fc",
+        "rev": "5d8f9987758ddd8b2928d804e4aaa6b6669416c0",
         "type": "github"
       },
       "original": {
