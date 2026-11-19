@@ -3,6 +3,7 @@
 {
   imports = [
     ./ai.nix
+    ./bat.nix # better cat
     ./fzf.nix # fuzzy search
     ./git.nix # git tui
     ./nvim.nix

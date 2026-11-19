@@ -4,7 +4,6 @@
     fzf
     fd # better file
     ripgrep # better grep
-    bat # better cat (for file preview)
   ];
 
   xdg.configFile."fzf".source = "${dotfiles}/fzf";
