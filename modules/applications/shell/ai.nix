@@ -6,7 +6,9 @@
   # Claude
   home.file.".claude/CLAUDE.md".source = "${dotfiles}/ai/AGENTS.md";
   home.file.".claude/skills".source = "${dotfiles}/ai/agents/skills";
+  home.file.".claude/themes".source = "${dotfiles}/ai/claude/themes";
 
   # Codex
   home.file.".codex/AGENTS.md".source = "${dotfiles}/ai/AGENTS.md";
+  home.file.".codex/themes/island-dark.tmTheme".source = "${dotfiles}/island-dark.tmTheme";
 }
