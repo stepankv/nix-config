@@ -51,6 +51,11 @@ deploy-vps:
         --flake '.#vps' \
         --target-host "root@{{ vps_ip }}"
 
+[doc("Create a Zellij Web login token for developer; shown only once")]
+[group("vps")]
+vps-web-token:
+    ssh "developer@{{ vps_ip }}" zellij web --create-token
+
 [doc("Delete old profile generations on the VPS and run garbage collection")]
 [group("vps")]
 gc-vps:
