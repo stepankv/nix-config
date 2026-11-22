@@ -18,6 +18,7 @@
   };
 
   xdg.enable = true;
+  my.ssh.device = "homestation";
   programs.home-manager.enable = true;
 
   home.packages = with pkgs.unstable; [

@@ -23,6 +23,7 @@
   };
 
   xdg.enable = true;
+  my.ssh.device = "macos";
   programs.home-manager.enable = true;
   fonts.fontconfig.enable = true;
 

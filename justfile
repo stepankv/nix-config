@@ -23,3 +23,9 @@ switch:
 fmt:
     @just --fmt
     nix fmt
+
+[arg("service", help="Service key to restore: github, gitlab, or all")]
+[doc("Restore local SSH keys from Bitwarden; run bw login first")]
+[positional-arguments]
+ssh-restore service:
+    bash scripts/ssh-restore.sh "$1"

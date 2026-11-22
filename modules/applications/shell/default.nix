@@ -7,6 +7,7 @@
     ./fzf.nix # fuzzy search
     ./git.nix # git tui
     ./nvim.nix
+    ./ssh.nix
     ./starship.nix # shell prompt
     ./utils.nix
     ./yazi.nix # file manager
