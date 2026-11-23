@@ -25,10 +25,10 @@
 
 let
   pname = "hiddify";
-  version = "5.5.5";
+  version = "5.9.15";
   appimage = fetchurl {
-    url = "https://github.com/hiddify/hiddify-app/releases/download/v${version}/Hiddify-Linux-x64-AppImage.AppImage";
-    hash = "sha256-0cpIwiqtOMs6UyT8uq2f3aV9dHedBnHffxTJnIXW0EE=";
+    url = "https://github.com/hiddify/hiddify-app/releases/download/v${version}/Hiddify-Linux-x64.AppImage";
+    hash = "sha256-B+ZWXoR5pnicpkVpJKkc6IbnFn+Dhk8LogvDKOm25Ms=";
   };
 in
 stdenv.mkDerivation {
@@ -89,10 +89,6 @@ stdenv.mkDerivation {
     mkdir -p "$out/lib/hiddify" "$out/bin"
     cp -r hiddify HiddifyCli lib data "$out/lib/hiddify/"
     install -Dm644 hiddify.png "$out/share/icons/hicolor/256x256/apps/hiddify.png"
-
-    # The upstream CLI resolves this dependency against the working directory.
-    patchelf --replace-needed ./lib/hiddify-core.so hiddify-core.so \
-      "$out/lib/hiddify/HiddifyCli"
 
     ln -s "$out/lib/hiddify/HiddifyCli" "$out/bin/HiddifyCli"
 
