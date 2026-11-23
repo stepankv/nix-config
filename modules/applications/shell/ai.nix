@@ -11,5 +11,5 @@
   # Codex
   home.file.".codex/AGENTS.md".source = "${dotfiles}/ai/AGENTS.md";
   home.file.".codex/rules/custom.rules".source = "${dotfiles}/ai/codex/rules/custom.rules";
-  home.file.".codex/themes/island-dark.tmTheme".source = "${dotfiles}/island-dark.tmTheme";
+  home.file.".codex/themes/island-dark.tmTheme".source = "${dotfiles}/sublime/themes/island-dark.tmTheme";
 }

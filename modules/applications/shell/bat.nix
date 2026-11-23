@@ -8,6 +8,6 @@
   };
 
   xdg.configFile."bat/config".source = "${dotfiles}/bat/config";
-  xdg.configFile."bat/syntaxes".source = "${dotfiles}/bat/syntaxes";
-  xdg.configFile."bat/themes/island-dark.tmTheme".source = "${dotfiles}/island-dark.tmTheme";
+  xdg.configFile."bat/syntaxes".source = "${dotfiles}/sublime/syntaxes";
+  xdg.configFile."bat/themes/island-dark.tmTheme".source = "${dotfiles}/sublime/themes/island-dark.tmTheme";
 }
