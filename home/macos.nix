@@ -1,4 +1,9 @@
-{ workstation, dotfiles, pkgs, ... }:
+{
+  workstation,
+  dotfiles,
+  pkgs,
+  ...
+}:
 
 {
   imports = [
